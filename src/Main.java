@@ -9,13 +9,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Введите дробное число: ");
         String input = scanner.next();
+        String floatNumberPattern = "-?\\d+(\\.\\d+)?";
 
-        if (!input.matches("-?\\d+(\\.\\d+)?")) {
-            System.out.println("Введенное выражение числом не является. Попробуйте снова.");
-            while (!input.matches("-?\\d+(\\.\\d+)?")) {
-                input = scanner.next();
-            }
-            System.out.println("Введенное число: " + input);
-        } else System.out.println("Введенное число: " + input);
+        while (!input.matches(floatNumberPattern)) {
+            input = scanner.next();
+        }
+        System.out.println("Введенное число: " + input);
     }
 }
