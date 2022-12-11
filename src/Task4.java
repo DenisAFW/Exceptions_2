@@ -6,7 +6,7 @@ public class Task4 {
         System.out.printf("Введите слово: ");
         String word = scanner.nextLine();
 
-        if(word.length()==0){
+        if(word.isEmpty()){
             throw new RuntimeException("Пустота не является словом!");
         }
 
